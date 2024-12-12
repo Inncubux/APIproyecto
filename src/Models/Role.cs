@@ -7,7 +7,7 @@ namespace API.src.Models
 {
     public class Role
     {
-        private required int Id {get; set;}
-        private required string Name {get; set;}
+        public required int Id {get; set;}
+        public required string Name {get; set;} = string.Empty;
     }
 }

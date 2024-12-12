@@ -17,8 +17,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 
-.WithOpenApi();
-
+app.MapGet("/example", () => "Hello World!")
+   .WithOpenApi(); // Correcto
 app.Run();
 
 

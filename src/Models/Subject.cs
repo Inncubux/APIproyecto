@@ -7,17 +7,13 @@ namespace API.src.Models
 {
     public class Subject
     {
-        private required int Id { get; set; }
-        private required int Name { get; set; }
-        private required int Hour { get; set; }
-        private required String Section { get; set; } = string.empty;
-        private required String Paralelo { get; set; } = string.empty;
-        private required int CountStudent { get; set; }
-        private required String State { get; set; } =string.empty;
-
-        private required List<Student> Students = [];
-
-        
+        public required string Id { get; set; } =string.Empty;
+        public required string Name { get; set; } = string.Empty;
+        public required int Hour { get; set; }
+        public required string Section { get; set; } = string.Empty;
+        public required int CountStudent { get; set; }
+        public required string State { get; set; } =  string.Empty;
+        public required List<Student> Students = [];
         
     }
 }

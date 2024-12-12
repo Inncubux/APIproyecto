@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,16 +10,16 @@ namespace API.src.Models
     {
         public required int Id { get; set; }
         public int IdMentor { get; set; }
-        public required String Name { get; set; } = string.empty;
-        public required String UserName { get; set; } = string.empty;
-        public required String LastName { get; set; } = string.empty;
+        public required string Name { get; set; } = string.Empty;
+        public required string UserName { get; set; } = string.Empty;
+        public required string LastName { get; set; } = string.Empty;
         [EmailAddress]
-        public required String PersonalEmail { get; set; } = string.empty;
+        public required string PersonalEmail { get; set; } = string.Empty;
         [EmailAddress]
-        public required String EmpresarialEmail { get; set; } =string.Empty;
+        public required string EmpresarialEmail { get; set; } =  string.Empty;
 
-        public Role role { get; set; }
-        public int RoleId { get; set; }
+        public Role? role { get; set; }
+        public required int RoleId { get; set; }
         
         
         
