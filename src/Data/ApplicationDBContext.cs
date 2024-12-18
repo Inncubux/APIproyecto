@@ -1,23 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using API.src.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.src.Data
 {
-    public class ApplicationDBContext(DbContextOptions dbContextOptions) : DbContext(dbContextOptions)
+    public class ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : DbContext(options)
     {
-        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options)
-        :base(options)
-        {
-        }
-        public ApplicationDBContext()
-        :this(new DbContextOptions<ApplicationDBContext>())
-        {
-        }
-
         public DbSet<Admin> Admins { get; set; } = null!; 
 
         public DbSet<Role> Roles { get; set; } = null!;
